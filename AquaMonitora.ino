@@ -14,7 +14,7 @@ static uint8_t taskCoreOne  = 1;
 //constantes e variáveis globais
 long lastConnectionTime;
 char EnderecoAPIThingSpeak[] = "api.thingspeak.com";
-String ChaveEscritaThingSpeak = "TXP64G9YUISIWKOC";
+String ChaveEscritaThingSpeak = "UIESQUECI";
 #define INTERVALO_ENVIO_THINGSPEAK  1000 * 60/*(segundos)*/ * 30/*(minutos)*/  //intervalo entre envios de dados ao ThingSpeak (em ms)
 //WiFiClient client;
 
@@ -38,8 +38,8 @@ DeviceAddress tempDeviceAddress;
 SSD1306  display(SSD_ADDRESS, SDA_PIN, SCL_PIN);
 
 
-const char* ssid = "198"; //nome da rede
-const char* password = "biazzi_18"; //senha da rede
+const char* ssid = "NãoVouFalar"; //nome da rede
+const char* password = "vixi"; //senha da rede
 
 hw_timer_t *timer = NULL; //faz o controle do temporizador (interrupção por tempo)
 
@@ -88,7 +88,7 @@ void setup()
   display.drawString(35, 15,  "OK");
   display.display();
   ArduinoOTA.setHostname("myesp32");
-  ArduinoOTA.setPassword("123");
+  ArduinoOTA.setPassword("Essa é muito secreta");
 
   ArduinoOTA.onStart( startOTA ); //startOTA é uma função criada para simplificar o código
   ArduinoOTA.onEnd( endOTA ); //endOTA é uma função criada para simplificar o código
